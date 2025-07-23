@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>○○大学○○学科 合格発表</title>
+  <style>
+    body {
+      font-family: "Helvetica", "Arial", sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background-color: #f0f2f5;
+      color: #333;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #003366;
+      color: white;
+      padding: 1em 2em;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+      height: 60px;
+      box-sizing: border-box;
+    }
+
+    .menu {
+      font-size: 1.6em;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 80px auto 40px;
+      padding: 0 20px;
+    }
+
+    section {
+      margin-bottom: 30px;
+    }
+
+    h1, h2 {
+      color: #003366;
+      margin-bottom: 15px;
+    }
+
+    h1 {
+      font-size: 2em;
+    }
+
+    h2 {
+      font-size: 1.6em;
+      border-bottom: 2px solid #003366;
+      padding-bottom: 8px;
+    }
+
+    p {
+      font-size: 1.1em;
+      margin-top: 0;
+    }
+
+    a.button-link {
+      display: inline-block;
+      margin-top: 1em;
+      padding: 12px 28px;
+      background-color: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    a.button-link:hover,
+    a.button-link:focus {
+      background-color: #0056b3;
+    }
+
+    ul {
+      padding-left: 1.2em;
+      margin-top: 0;
+    }
+
+    ul.no-dot {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul.no-dot li {
+      margin-bottom: 1em;
+      line-height: 1.5;
+    }
+
+    ul.no-dot li strong {
+      color: #003366;
+      display: inline-block;
+      min-width: 25px;
+    }
+
+    /* 関連コンテンツのセクションだけに背景・余白・影を付ける */
+    section.tabs {
+      background: white;
+      padding: 20px 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+
+    /* 関連コンテンツのリンクをボタン風に */
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .tabs a {
+      padding: 10px 20px;
+      background-color: #e7f0ff;
+      border-radius: 6px;
+      color: #007bff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background-color 0.3s ease;
+      flex-grow: 1;
+      text-align: center;
+    }
+
+    .tabs a:hover,
+    .tabs a:focus {
+      background-color: #c1d6ff;
+    }
+
+    /* レスポンシブ調整 */
+    @media screen and (max-width: 600px) {
+      main {
+        margin: 70px 15px 30px;
+        padding: 0 10px;
+      }
+      .tabs {
+        flex-direction: column;
+      }
+      header {
+        padding: 1em 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div>○○大学○○学部○○学科</div>
+    <div class="menu" aria-label="メニュー">☰</div>
+  </header>
+
+  <main>
+    <section>
+      <h1>令和〇年度 一般選抜合格者発表ページ</h1>
+      <p>○○大学○○学部○○学科の令和〇年度一般選抜合格者の受検番号の一覧は以下をクリックしてご確認ください。</p>
+      <a href="daigaku_goukaku.pdf" class="button-link" download>
+  令和〇年度一般選抜合格者受検番号
+</a>
+    </section>
+
+    <section>
+      <h2>お問い合わせ</h2>
+      <ul>
+        <li>○○大学入試課</li>
+        <li>電話：0123-456-789</li>
+        <li>メール：○○daigakunyushi@example.ac.jp</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>よくある質問（FAQ）</h2>
+      <ul class="no-dot">
+        <li><strong>Q：</strong>合格者一覧は紙で届きますか？<br>→ A：郵送での送付はありません。Web上でご確認ください。</li>
+        <li><strong>Q：</strong>不合格の場合、連絡はありますか？<br>→ A：不合格者への個別通知は行っておりません。</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>合格発表に関する注意事項</h2>
+      <ul>
+        <li>合格者番号の掲載は令和〇年度◎月◎日に削除されます。</li>
+        <li>番号の見間違いにご注意ください。</li>
+        <li>正式な合否は後日送付される書面を必ずご確認ください。</li>
+      </ul>
+    </section>
+
+    <section class="tabs">
+      <h2>関連コンテンツ</h2>
+      <a href="#">入試情報</a>
+      <a href="#">お問い合わせ一覧</a>
+      <a href="#">他学部のコンテンツ</a>
+    </section>
+  </main>
+</body>
+</html>
